@@ -1,0 +1,26 @@
+package com.learn.basic;
+import java.util.Scanner;
+public class Factorial {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner input = new Scanner(System.in);
+		
+		System.out.print("Enter the num: ");
+		int num = input.nextInt();
+		System.out.println();
+		
+		int fact = 1;
+		if(num < 0) System.out.println("Invalid number - Negatives not allowed!!!");
+		else {
+			while(num>0) {
+				fact *= num;
+				num--;
+			}
+			System.out.println("Factorial: " + fact);
+		}
+		
+		input.close();
+	}
+
+}

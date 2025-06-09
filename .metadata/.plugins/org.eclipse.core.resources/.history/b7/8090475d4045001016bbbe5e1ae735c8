@@ -1,0 +1,44 @@
+import java.util.Scanner;
+
+public class Armstrong {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int number = scanner.nextInt();
+
+        int original = number;
+        int result = 0;
+        int count = 0;
+
+        // Count digits
+        int temp = number;
+        while (temp != 0) {
+            count++;
+            temp /= 10;
+        }
+
+        // Calculate sum of digits raised to power 'count'
+        temp = number;
+        while (temp != 0) {
+            int digit = temp % 10;
+
+            // Calculate digit^count manually (no Math.pow)
+            int power = 1;
+            for (int i = 0; i < count; i++) {
+                power *= digit;
+            }
+
+            result += power;
+            temp /= 10;
+        }
+
+        // Compare result with original
+        if (result == original) {
+            System.out.println(original + " is an Armstrong number.");
+        } else {
+            System.out.println(original + " is NOT an Armstrong number.");
+        }
+
+        scanner.close();
+    }
+}
