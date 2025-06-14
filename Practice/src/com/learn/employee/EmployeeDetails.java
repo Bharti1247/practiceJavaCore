@@ -9,7 +9,6 @@ public class EmployeeDetails {
 		
 		System.out.println(emp1);
 		System.out.println(emp2);
-
 	}
 
 }
