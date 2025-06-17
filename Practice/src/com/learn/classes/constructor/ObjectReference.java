@@ -7,14 +7,20 @@ public class ObjectReference extends Child {
 		System.out.println("Creating Parent Object and storing in Parent ref");
 		Parent p = new Parent();
 		p.show();
+		Parent.staticShow();
+		System.out.println();
 		
 		System.out.println("Creating Child Object and storing in Child ref");
 		Child c = new Child();
 		c.show();
+		Child.staticShow();
+		System.out.println();
 		
 		System.out.println("Creating Child Object and storing in Parent ref");
 		Parent p1 = new Child();
 		p1.show();
+		Parent.staticShow();
+		System.out.println();
 		
 	}
 	

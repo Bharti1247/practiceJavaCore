@@ -8,4 +8,8 @@ public class Child extends Parent {
 	void show () {
 		System.out.println("Child class....");
 	}
+	
+	static void staticShow() {
+		System.out.println("static method child class....");
+	}
 }
