@@ -34,5 +34,15 @@ public class ImplementationClass implements AbstractInterface, AbstractInterface
 		// TODO Auto-generated method stub
 		
 	}
-	
+ /*
+  * Overriding this is not necessary, as it is a default method
+  * Also, no need to use default while overriding this method, 
+  * if we'll use default then it will act as a access modifier and will throw Compile-time error 
+  * as by default all the interface methods are public
+	@Override
+	public int multiply(int num1, int num2) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	*/
 }

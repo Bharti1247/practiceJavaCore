@@ -5,7 +5,7 @@ public class Employee {
 	private String age;
 	private float salary;
 	
-	Employee (String name, String age, float salary) {
+	public Employee (String name, String age, float salary) {
 		this.name = name;
 		this.age = age;
 		this.salary = salary;
@@ -23,15 +23,15 @@ public class Employee {
 		this.salary = salary;
 	}
 	
-	String getName() {
+	public String getName() {
 		return name;
 	}
 	
-	String getAge() {
+	public String getAge() {
 		return age;
 	}
 	
-	float getSalary() {
+	public float getSalary() {
 		return salary;
 	}
 	
