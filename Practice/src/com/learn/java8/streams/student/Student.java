@@ -1,4 +1,4 @@
-package com.learn.java8.streams;
+package com.learn.java8.streams.student;
 
 public class Student {
 	
