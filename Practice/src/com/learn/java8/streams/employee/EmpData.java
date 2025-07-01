@@ -94,6 +94,16 @@ public class EmpData {
 		emp.stream()
 			.sorted(Comparator.comparing(Employee::getDept).thenComparing(Employee::getSalary))
 			.forEach(System.out::println);
+		System.out.println();
+		
+		// Employee with second highest salary
+		Optional<Employee> empWithSecondHighestSalary
+			= emp.stream().sorted(Comparator.comparingDouble(Employee::getSalary)
+				.reversed()).skip(1).findFirst();
+		
+		if (empWithSecondHighestSalary.isPresent()) 
+			System.out.println(empWithSecondHighestSalary);
+		else System.out.println("Not found");
 	}
 
 }
