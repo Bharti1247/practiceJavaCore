@@ -12,7 +12,7 @@ public class TestBoundedBuffer {
 			for (int i=0; i<20; i++) {
 				try {
 					bb.put(i);
-					Thread.sleep(500);
+					Thread.sleep(1000);
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
@@ -25,8 +25,9 @@ public class TestBoundedBuffer {
 		Thread consumer = new Thread(() -> {
 			for (int i=0; i<20; i++) {
 				try {
-					int value = bb.get();
+					bb.get();
 					Thread.sleep(1000); // delay
+					
 				} catch (InterruptedException e) {
 					Thread.currentThread().interrupt();
 				}

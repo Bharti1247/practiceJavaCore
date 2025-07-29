@@ -13,8 +13,6 @@ public class StaticTest {
 		System.out.println(i);
 		t.i = 1;
 		System.out.println(i);
-	}
-	
-	
+	}	
 
 }
