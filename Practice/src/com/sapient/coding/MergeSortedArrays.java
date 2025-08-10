@@ -1,0 +1,39 @@
+package com.sapient.coding;
+
+public class MergeSortedArrays {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] arr1 = {1,3,5,6,10};
+		int[] arr2 = {2,4,8};
+		
+		int len1 = arr1.length;
+		int len2 = arr2.length;
+		
+		int[] sortedArr = new int[len1+len2];
+		
+		int i=0, j=0, k=0;
+		
+		while (i < len1 && j < len2) {
+			if (arr1[i] < arr2[j]) {
+				sortedArr[k++] = arr1[i++];
+			} else {
+				sortedArr[k++] = arr2[j++];
+			}
+		}
+		
+		while (i < len1) {
+			sortedArr[k++] = arr1[i++];
+		}
+		
+		while (j < len2) {
+			sortedArr[k++] = arr2[j++];
+		}
+		
+		for (int ele : sortedArr) {
+			System.out.print(ele + " ");
+		}
+
+	}
+
+}
