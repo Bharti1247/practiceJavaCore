@@ -1,29 +1,31 @@
 package com.sapient.dsa;
 
 import java.util.HashMap;
-import java.util.Map;
 
 public class SubstringCount {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		String  s = "dvdf";
-		HashMap<String, Integer> map = new HashMap<>();
+		String  s = "swiss";
 		
+		HashMap<Character, Integer> map = new HashMap<>();
 		int len = s.length();
-        for (int i=0; i<len; i++) {
-            for (int j=i+1; j<=len; j++) {
-                //System.out.println(s.substring(i,j));
-            	String temp = s.substring(i,j);
-                map.put(temp, temp.length());
-            }
-        }
-        
-        for (Map.Entry<String, Integer> entry : map.entrySet()) {
-        	System.out.println(entry.getKey() + " - " + entry.getValue());
-        }
-
+		int start = 0;
+		int count = 0;
+		
+		for (int end=0; end<len; end++) {
+			char c = s.charAt(end);
+			
+			if (map.containsKey(c) && map.get(c) >= start) {
+				start = map.get(c) + 1;				
+			} 
+				
+			map.put(c, end);
+			count = Math.max(count, end-start+1);
+		}
+		
+		System.out.println(count);
 	}
 
 }
